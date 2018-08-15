@@ -1,0 +1,4 @@
+<div>
+  {{ payment.amount }} <div (click)="onClick(payment._id)">click</div>
+  <div [ngClass]="{'lolClass': payment.status === 'outbound'}"></div>
+</div>
