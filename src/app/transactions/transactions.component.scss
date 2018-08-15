@@ -1,5 +1,26 @@
-.lolClass {
-  width: 10px;
-  height: 10px;
-  background: #000;
+.transactions-block {
+  margin: 30px 40px;
+  padding: 20px;
+  border: 1px solid #6e7ad2;
+  background: #fbfbfb;
+  border-radius: 4px;
+}
+.transactions-table_header {
+  display: flex;
+  & span {
+    flex-grow: 1;
+  }
+}
+
+.transactions-description {
+  flex-grow: 6 !important;
+  min-width: 200px !important;
+}
+
+.transactions-line {
+  display: flex;
+  & span {
+    flex-grow: 1;
+    min-width: 100px;
+  }
 }

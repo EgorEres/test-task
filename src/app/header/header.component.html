@@ -1,0 +1,13 @@
+<div class='header-wrapper'>
+  <a
+    routerLink="/"
+    (click)="headerMenuClick('payments')"
+    [ngClass]="{'active-button': activButton === 'payments'}"
+  >Транзакции</a>
+  <a
+    (click)="headerMenuClick('news')"
+    routerLink="/news"
+    [ngClass]="{'active-button': activButton === 'news'}"
+  >Новости</a>
+  <div class="header-logo">test-task</div>
+</div>

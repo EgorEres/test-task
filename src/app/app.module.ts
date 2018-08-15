@@ -4,16 +4,20 @@ import { RouterModule } from '@angular/router'
 import { AppComponent } from './app.component';
 import { TransactionsComponent } from './transactions/transactions.component';
 import { HttpModule } from '@angular/http';
+import { HeaderComponent } from './header/header.component';
+import { NewsComponent } from './news/news.component';
 
 const routes = [
   {path: '', component: TransactionsComponent},
-  {path: 'home', component: TransactionsComponent}
+  {path: 'news', component: NewsComponent}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
-    TransactionsComponent
+    TransactionsComponent,
+    HeaderComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,25 @@
 import { Component, Input } from '@angular/core';
+import { ApiService } from '../services/api.service'
 
 @Component({
-  selector: 'app-transactions',
+  selector: 'app-payments',
   templateUrl: './transactions.component.html',
   styleUrls: ['./transactions.component.scss']
 })
 
 export class TransactionsComponent {
-  @Input() payment;
+  constructor (private apiService: ApiService) {}
+  
+  payments = []
+  news = []
 
-  onClick(id) {
-    console.log('click', id, this.payment)
-    this.payment.amount = Number(this.payment.amount) + 1
+  ngOnInit () {
+    this.apiService.getTransactions().subscribe(response => {
+      console.log(response)
+      this.payments = response
+    })
+    this.apiService.getNews().subscribe(response => {
+      this.news = response
+    })
   }
 }

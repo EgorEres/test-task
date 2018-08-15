@@ -1,0 +1,27 @@
+.header-wrapper {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+  background: #0c0f2d;
+  & a {
+    text-decoration: none;
+    color: #b6cac6;
+    margin-right: 30px;
+    cursor: pointer;
+    width: 100xp;
+  }
+}
+
+.active-button {
+  font-weight: bold;
+  color: #fff !important;
+}
+
+.header-logo {
+  color: #f7ff00;
+  width: 100%;
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+}

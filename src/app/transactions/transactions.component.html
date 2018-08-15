@@ -1,4 +1,22 @@
-<div>
-  {{ payment.amount }} <div (click)="onClick(payment._id)">click</div>
-  <div [ngClass]="{'lolClass': payment.status === 'outbound'}"></div>
+<div class="transactions-block">
+  <div class="transactions-table_header">
+    <span class="transactions-state"></span>
+    <span class="transactions-amount">amount</span>
+    <span>currency</span>
+    <span class="transactions-description">description</span>
+    <span>date</span>
+    <span>author</span>
+    <span>type</span>
+  </div>
+  <div *ngFor="let payment of payments">
+    <div class="transactions-line" >
+      <span>{{payment.status}}</span>
+      <span>{{payment.amount}}</span>
+      <span>{{payment.currency}}</span>
+      <span class="transactions-description">{{payment.description}}</span>
+      <span>{{payment.date}}</span>
+      <span>{{payment.author}}</span>
+      <span>{{payment.type}}</span>
+    </div>
+  </div>
 </div>
